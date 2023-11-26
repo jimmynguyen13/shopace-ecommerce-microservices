@@ -1,7 +1,10 @@
 const { default: mongoose } = require("mongoose");
+const {
+  db: { host, port, name },
+} = require("../configs/config.mongodb");
 
-const connectionString = `mongodb://localhost:27017/shopace`;
-
+const connectionString = `mongodb://${host}:${port}/${name}`;
+// console.log(connectionString);
 // Create class Database to use STRATEGY PATTERN for others DB engines in the future)
 
 class Database {
