@@ -17,11 +17,7 @@ require("./dbs/init.mongodb");
 // checkOverload();
 
 // init routes
-app.get("/", (req, res, next) => {
-  return res.status(200).json({
-    message: "Welcome to Shopace",
-  });
-});
+app.use("", require("./routes"));
 
 // handling errors
 
